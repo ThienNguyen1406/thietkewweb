@@ -1,0 +1,15 @@
+
+#button_1{
+    margin-left: 120px;
+}
+
+.label_form{
+    width: 220px;
+    /* display: flex; */
+    flex-direction: row;
+    
+} 
+.input_style{
+    margin-left: 22px;
+}
+

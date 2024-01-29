@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+        <script>
+             function calculateAge(){
+                var birthYear = document.getElementById("birthYear").value;
+                var birthYearNumber = parseInt(birthYear);
+                var currentYear= new Date().getFullYear;
+                var age= currentYear - birthYearNumber;
+
+
+                //tính can chi
+                var canIndex= (birthYearNumber - 4) % 10;
+                var chiIndex= (birthYearNumber - 4) % 12;
+
+                var can=['Canh', 'Tân', 'Nhâm', 'Quý', 'Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỉ'];
+                var chi=['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
+
+                switch(chiIndex){
+                    case 0:
+                        console.log(can[0]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 1:
+                        console.log(can[1]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 2:
+                        console.log(can[2]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 3:
+                        console.log(can[3]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 4:
+                        console.log(can[4]) + console.log(chi[chiIndex]);
+                        break; 
+                    case 6:
+                        console.log(can[5]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 6:
+                        console.log(can[6]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 7:
+                        console.log(can[7]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 8:
+                        console.log(can[8]) + console.log(chi[chiIndex]); 
+                        break;
+                    case 9:
+                        console.log(can[9]) + console.log(chi[chiIndex]);
+                        break; 
+                    case 10:
+                        console.log(can[0]) + console.log(chi[chiIndex]); 
+                        break;
+                     case 11:
+                        console.log(can[1]) + console.log(chi[chiIndex]);
+                        break;
+                    default:
+                        console.log("Error");
+                        break;
+                }
+
+                var resultMassage= can + chi;
+                document.getElementById("result").innerHTML=resultMassage;
+             }
+        </script>
+</head>
+<body>
+    <form id="ageForm" action="">
+        <h3>Chương trình tra tuổi</h3>
+        <label class="label_form" for="birthYear">Tuổi dương lịch</label>
+        <input  type="number" name="birthYear" id="birthYear">
+        <br>
+        <label class="label_form" for="birthYear">Tuổi âm lịch</label>
+        <input class="input_style" type="number" name="birthYear" id="birthYear">
+        <br>
+        <button id="button_1" type="reset" onclick="removeEventListener">Xóa</button>
+        <button id="button_2" type="button" onclick="calculateAge">Tra cứu</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
